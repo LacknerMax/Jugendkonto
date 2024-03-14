@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,17 +9,39 @@ namespace Jugendkonto_check
 {
     public class Jugendkonto : Konto
     {
-        public Jugendkonto()
-        {
 
+        private double _Limit;
+        private double _kontostand;
+
+
+
+        
+        public double GetLimit(double Limit)
+        {
+            return _Limit;
+
+            
+        }
+        public double GeldAbheben(double kontostand)
+        {
+            return kontostand;
         }
 
-        public double Limit { get; private set; }
-
-
-        public double GetLimit()
+        public double GetKontostand(double kontostand)
         {
-            return Limit;
+            return Kontostand;
+
+            if(GeldAbheben > Limit)
+            {
+                Console.WriteLine("Ihr gewünschter Betrag übersteigt das Limit");
+            }
+            
         }
+
+        
+
+        
+        
     }
+
 }

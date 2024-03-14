@@ -22,5 +22,11 @@ namespace Jugendkonto_check
         { 
             return Kontostand;
         }
+
+        public double Geldabheben(double kontostand)
+        {
+            return kontostand;
+        }
+        
     }
 }
