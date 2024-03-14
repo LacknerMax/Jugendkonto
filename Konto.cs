@@ -6,7 +6,21 @@ using System.Threading.Tasks;
 
 namespace Jugendkonto_check
 {
-    internal class Konto
+    public class Konto
     {
+        public double limit { get; private set; }
+
+        public double Kontostand { get; private set; }
+
+
+        public double GetLimit()
+        {
+            return limit;
+        }
+
+        public double GetKontostand() 
+        { 
+            return Kontostand;
+        }
     }
 }
